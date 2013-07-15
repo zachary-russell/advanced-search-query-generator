@@ -7,7 +7,7 @@
 
 include('form.php');
 
-wp_register_style('bootstrap', plugin_dir_url(__FILE__) . 'css/bootstrap.min.css');
+wp_register_style('bootstrap', plugin_dir_url(__FILE__) . 'css/bootstrap.css');
 
 wp_register_script('bootstrap', plugin_dir_url(__FILE__) . 'js/bootstrap.js');
 wp_register_script('lqgenjs', plugin_dir_url(__FILE__) . 'js/lqgen.js');
