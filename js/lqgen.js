@@ -16,7 +16,7 @@ function getQuery() {
     var data = jQuery('#query-form').serialize();
     jQuery.ajax({
         type: 'post',
-        url: '/wp-content/plugins/lqgen-wp/generate.php',
+        url: 'wp-content/plugins/lqgen-wp/generate.php',
         data: data,
         success: function(response) {
             jQuery('#query-output').html('<code>' + response + '</code>');
