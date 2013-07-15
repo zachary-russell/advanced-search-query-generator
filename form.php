@@ -1,7 +1,6 @@
 <?php
-function generate_form() {
+function show_query_form() {
 ?>
-    <div class="query-form-content">
         <div class="container">
             <form class="form-horizontal" id="query-form">
                 <fieldset>
@@ -144,6 +143,11 @@ function generate_form() {
                 </fieldset>
             </form><br>
         </div>
+<?php
+}
+
+function show_output_modal() {
+?>
         <div id="output-modal" class="modal hide">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
@@ -156,6 +160,5 @@ function generate_form() {
                 <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
             </div>
         </div>
-    </div>
 <?php
 }

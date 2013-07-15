@@ -18,4 +18,13 @@ wp_enqueue_script('jquery');
 wp_enqueue_script('bootstrap');
 wp_enqueue_script('lqgenjs');
 
-add_shortcode('lqgen-wp', 'generate_form');
+add_shortcode('lqgen-wp', 'lqgen_handler');
+
+function lqgen_handler() {
+?>
+    <div class="query-form-content">
+        <?php show_query_form(); ?>
+        <?php show_output_modal(); ?>
+    </div>
+<?php
+}
