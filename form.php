@@ -144,7 +144,7 @@ function generate_form() {
                 </fieldset>
             </form><br>
         </div>
-        <div id="output-modal" class="modal hide fade">
+        <div id="output-modal" class="modal hide">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                 <h3 id="output-modal-label">Generated Query</label>
