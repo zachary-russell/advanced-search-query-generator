@@ -23,7 +23,7 @@ add_shortcode('lqgen-wp', 'lqgen_handler');
 function lqgen_handler() {
     ob_start();
 ?>
-    <div class="query-form-content">
+    <div class="query-form-container">
         <?php show_query_form(); ?>
         <?php show_output_modal(); ?>
     </div>
