@@ -1,6 +1,7 @@
 <?php
 function generate_form() {
 ?>
+    <div class="query-form-content">
         <div class="container">
             <form class="form-horizontal" id="query-form">
                 <fieldset>
@@ -155,5 +156,6 @@ function generate_form() {
                 <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
             </div>
         </div>
+    </div>
 <?php
 }
