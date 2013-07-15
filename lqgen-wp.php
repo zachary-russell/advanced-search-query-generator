@@ -21,10 +21,12 @@ wp_enqueue_script('lqgenjs');
 add_shortcode('lqgen-wp', 'lqgen_handler');
 
 function lqgen_handler() {
+    ob_start();
 ?>
     <div class="query-form-content">
         <?php show_query_form(); ?>
         <?php show_output_modal(); ?>
     </div>
 <?php
+    return ob_get_clean();
 }
