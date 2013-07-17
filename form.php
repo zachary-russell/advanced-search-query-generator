@@ -116,7 +116,28 @@ function show_query_form() {
                     <div class="control-group" id="negative-keywords">
                         <label class="control-label" for="negative-keywords">Negative keywords</label>
                         <div class="controls">
-                            <input type="text" name="negative-keywords" placeholder="Separate with commas">
+                            <input type="text" name="negative-keywords" placeholder="Separate with commas"><br />
+                            <label class="radio inline">
+                                <input type="radio" name="negative-match" value="exact"> Exact match</input>
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" name="negative-match" value="broad" class="radiogroup-default"> Broad match</input>
+                            </label><br>
+                            <label class="radio inline">
+                                <input type="radio" name="negative-in" value="inurl"> inUrl</input>
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" name="negative-in" value="intitle"> inTitle</input>
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" name="negative-in" value="inanchor"> inAnchor</input>
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" name="negative-in" value="inpostauthor"> inPostAuthor</input>
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" name="negative-in" value="none" class="radiogroup-default"> None</input>
+                            </label>
                         </div>
                     </div>
                     <div class="control-group" id="andor">
