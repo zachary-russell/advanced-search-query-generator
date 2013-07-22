@@ -143,9 +143,6 @@ function show_query_form() {
                     <div class="control-group" id="andor">
                         <div class="controls">
                             <label class="radio">
-                                <input type="radio" name="andor" value="+"> Add + between terms?</input>
-                            </label>
-                            <label class="radio">
                                 <input type="radio" name="andor" value="or"> Add OR between terms?</input>
                             </label>
                             <label class="radio">
