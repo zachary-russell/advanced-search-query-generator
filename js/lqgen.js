@@ -12,11 +12,11 @@ function clearForm() {
     jQuery('#query-output').html('');
 }
 
-function getQuery() {
+function getQuery(generatorUrl) {
     var data = jQuery('#query-form').serialize();
     jQuery.ajax({
         type: 'post',
-        url: 'wp-content/plugins/lqgen-wp/generate.php',
+        url: generatorUrl,
         data: data,
         success: function(response) {
             jQuery('#query-output').html('<code>' + response + '</code>');

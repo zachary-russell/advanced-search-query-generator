@@ -1,5 +1,7 @@
 <?php
 function show_query_form() {
+    $generator_url = parse_url(plugin_dir_url(__FILE__) . 'generate.php');
+    $generator_url = $generator_url['path'];
 ?>
             <form class="form-horizontal" id="query-form">
                 <fieldset>
@@ -152,7 +154,7 @@ function show_query_form() {
                     </div>
                     <div class="control-group">
                         <div class="controls">
-                            <button type="button" id="submit" class="btn btn-primary" onclick="getQuery();">Submit</button>
+                            <button type="button" id="submit" class="btn btn-primary" onclick="getQuery('<?php echo $generator_url; ?>');">Submit</button>
                             <button type="button" id="clear" class="btn btn-danger" onclick="clearForm();">Clear</button>
                         </div>
                     </div>
