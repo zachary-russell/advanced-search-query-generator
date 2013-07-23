@@ -50,7 +50,8 @@ function build_search_query($params) {
     }
 
     if (strlen($params['negative-keywords'])) {
-        $squery .= ' -' . preg_replace('/, */', ' -', $params['negative-keywords']);
+        // $squery .= ' -' . preg_replace('/, */', ' -', $params['negative-keywords']);
+        $squery .= get_negative_keywords($params);
     }
 
     return $squery;
@@ -114,4 +115,22 @@ function get_search_terms($params) {
     }
 
     return implode($glue, $terms);
+}
+
+function get_negative_keywords($params) {
+    $keywords = explode(',', preg_replace('/, */', ',', $params['negative-keywords']));
+    if ($params['negative-match'] == 'exact') {
+        foreach ($keywords as &$keyword) {
+            $keyword = "\"$keyword\"";
+        }
+    }
+
+    if ($params['negative-in'] != 'none') {
+        foreach ($keywords as &$keyword) {
+            $keyword = "{$params['negative-in']}:$keyword";
+        }
+    }
+
+    $glue = ($params['negative-andor'] == 'none') ? ' ' : $params['negative-andor'];
+    return implode($glue, preg_replace('/^/', ' -', $keywords));
 }
