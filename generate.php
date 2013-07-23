@@ -131,6 +131,6 @@ function get_negative_keywords($params) {
         }
     }
 
-    $glue = ($params['negative-andor'] == 'none') ? ' ' : $params['negative-andor'];
+    $glue = ($params['andor'] == 'none') ? ' ' : " {$params['andor']} ";
     return implode($glue, preg_replace('/^/', ' -', $keywords));
 }
